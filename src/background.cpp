@@ -24,12 +24,14 @@ void Background::Draw() {
         textureLoaded_ = true;
     }
 
+    Color color = ColorAlpha(WHITE, 0.5f);
+
     // Draw the background tiles to fill the screen
     for (int x = 0; x < tilesX_; x++) {
         for (int y = 0; y < tilesY_; y++) {
             destRect_.x = x * tileSize_;
             destRect_.y = y * tileSize_;
-            DrawTexturePro(texture_[0], sourceRect_, destRect_, {0.0f, 0.0f}, 0.0f, WHITE);
+            DrawTexturePro(texture_[0], sourceRect_, destRect_, {0.0f, 0.0f}, 0.0f, color);
         }
     }
 }

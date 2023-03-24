@@ -18,7 +18,7 @@ void Game::Update() {
 
 void Game::Draw() {
     BeginDrawing();
-    ClearBackground(BLUE);
+    ClearBackground(BLACK);
 
     background_.Draw();
     player_.Draw();

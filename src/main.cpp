@@ -1,15 +1,8 @@
-#include "raylib.h"
+#include "game.h"
 
 int main() {
-    InitWindow(640, 360, "Bubba's World");
-
-    while (!WindowShouldClose()) {
-        BeginDrawing();
-        ClearBackground(BLUE);
-        EndDrawing();
-    }
-
-    CloseWindow();
+    Game game(640, 360, "Bubba's World");
+    game.Run();
 
     return 0;
 }

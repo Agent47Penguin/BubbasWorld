@@ -2,7 +2,7 @@
 CC = g++
 
 #OBJS specifies which files to compile as part of the project
-OBJS = src/main.cpp
+OBJS = src/main.cpp src/game.cpp
 
 #INCLUDE_PATHS specifies the additional include paths we'll need
 INCLUDE_PATHS = -I vendors/include

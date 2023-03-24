@@ -1,4 +1,5 @@
 #pragma once
+#include "background.h"
 #include "raylib.h"
 
 class Game {
@@ -14,7 +15,9 @@ class Game {
     void Draw();
     void Shutdown();
 
-    int screenWidth;
-    int screenHeight;
-    const char *title;
+    int screenWidth_;
+    int screenHeight_;
+    const char *title_;
+
+    Background background_;
 };

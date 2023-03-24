@@ -1,12 +1,13 @@
 #include "game.h"
 
 Game::Game(int winWidth, int winHeight, const char *winTitle)
-    : screenWidth(winWidth), screenHeight(winHeight), title(winTitle) {}
+    : screenWidth_(winWidth), screenHeight_(winHeight), title_(winTitle),
+      background_(screenWidth_, screenHeight_, 32) {}
 
 Game::~Game() {}
 
 void Game::Init() {
-    InitWindow(screenWidth, screenHeight, title);
+    InitWindow(screenWidth_, screenHeight_, title_);
     SetTargetFPS(60);
 }
 
@@ -16,6 +17,9 @@ void Game::Update() {
 void Game::Draw() {
     BeginDrawing();
     ClearBackground(BLUE);
+
+    background_.Draw();
+
     EndDrawing();
 }
 

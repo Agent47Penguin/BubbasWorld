@@ -1,5 +1,6 @@
 #pragma once
 #include "background.h"
+#include "player.h"
 #include "raylib.h"
 
 class Game {
@@ -20,4 +21,5 @@ class Game {
     const char *title_;
 
     Background background_;
+    Player player_;
 };

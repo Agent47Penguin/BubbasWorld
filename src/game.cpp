@@ -2,7 +2,8 @@
 
 Game::Game(int winWidth, int winHeight, const char *winTitle)
     : screenWidth_(winWidth), screenHeight_(winHeight), title_(winTitle),
-      background_(screenWidth_, screenHeight_, 32) {}
+      background_(screenWidth_, screenHeight_, 32),
+      player_() {}
 
 Game::~Game() {}
 
@@ -12,6 +13,7 @@ void Game::Init() {
 }
 
 void Game::Update() {
+    player_.Update();
 }
 
 void Game::Draw() {
@@ -19,6 +21,7 @@ void Game::Draw() {
     ClearBackground(BLUE);
 
     background_.Draw();
+    player_.Draw();
 
     EndDrawing();
 }
